@@ -1,0 +1,32 @@
+name: Organize Solutions by Language
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Organizar arquivos por linguagem
+        run: |
+          mkdir -p sql python csharp
+          # move arquivos .sql para sql/
+          find . -maxdepth 1 -name "*.sql" -exec mv {} sql/ \;
+          # move arquivos .py para python/
+          find . -maxdepth 1 -name "*.py" -exec mv {} python/ \;
+          # move arquivos .cs para csharp/
+          find . -maxdepth 1 -name "*.cs" -exec mv {} csharp/ \;
+
+      - name: Commit mudanças
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Organize solutions by language" || echo "No changes"
+          git push
