@@ -1,14 +1,15 @@
 🧩 Resolução de Exercícios - LeetCode
 
-Este repositório contém soluções para diversos problemas do LeetCode, organizados por tópicos e níveis de dificuldade.
+Este repositório contém soluções para diversos problemas do LeetCode, organizados por linguagem
+
 
 📖 Objetivo
 
-Praticar lógica de programação e algoritmos.
+- Praticar lógica de programação e algoritmos.
 
-Fazer a manutenção contínua dos meus conhecimentos em SQL, Python, C# e outras linguagens.
+- Fazer a manutenção contínua dos meus conhecimentos em SQL, Python, C# e outras linguagens.
 
-Criar um histórico de estudos e evolução pessoal.
+- Criar um histórico de estudos e evolução pessoal.
 
 📂 Estrutura do Repositório
 
