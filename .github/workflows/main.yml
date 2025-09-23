@@ -8,7 +8,6 @@ on:
 jobs:
   organize:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
@@ -16,53 +15,47 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Organizar pastas de problemas em diretórios de linguagem
+      - name: Organize folders into language directories
         run: |
-          # 1. Cria os diretórios de nível superior para cada linguagem
+          # 1. Cria os diretórios de nível superior
           mkdir -p SQL Python CSharp
 
-          # 2. Percorre cada pasta de problema na raiz do projeto
+          # 2. Percorre cada pasta de problema
           for problem_dir in */; do
-            # Ignora pastas que não são de problemas (como .git, .github, etc.)
-            if [ ! -f "${problem_dir}README.md" ]; then
+            # Ignora pastas de configuração e as que já foram criadas
+            if [[ "$problem_dir" == ".git/" || "$problem_dir" == ".github/" || "$problem_dir" == "SQL/" || "$problem_dir" == "Python/" || "$problem_dir" == "CSharp/" ]]; then
               continue
             fi
+            
+            # Pega apenas o nome base do diretório, sem a barra "/" no final
+            base_name=$(basename "$problem_dir")
+            echo "Processing: $base_name"
 
-            echo "Processando: ${problem_dir}"
-
-            # 3. Para cada tipo de arquivo, cria a estrutura e move os arquivos
-            # Verifica se existem arquivos .sql
+            # 3. Verifica cada tipo de arquivo e move para a estrutura correta
+            # Usa o $base_name para criar o caminho de destino correto
             if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
-              echo "  - Encontrado arquivo SQL."
-              mkdir -p "SQL/${problem_dir}"
-              mv "${problem_dir}"*.sql "SQL/${problem_dir}/"
-              # Copia o README para o novo local
-              cp "${problem_dir}README.md" "SQL/${problem_dir}/"
-            fi
-            
-            # Verifica se existem arquivos .py
-            if ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
-              echo "  - Encontrado arquivo Python."
-              mkdir -p "Python/${problem_dir}"
-              mv "${problem_dir}"*.py "Python/${problem_dir}/"
-              cp "${problem_dir}README.md" "Python/${problem_dir}/"
+              echo "  - Found SQL file."
+              dest="SQL/${base_name}"
+              mkdir -p "$dest"
+              mv "${problem_dir}"* "$dest/"
             fi
 
-            # Verifica se existem arquivos .cs
-            if ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
-              echo "  - Encontrado arquivo C#."
-              mkdir -p "CSharp/${problem_dir}"
-              mv "${problem_dir}"*.cs "CSharp/${problem_dir}/"
-              cp "${problem_dir}README.md" "CSharp/${problem_dir}/"
+            if ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
+              echo "  - Found Python file."
+              dest="Python/${base_name}"
+              mkdir -p "$dest"
+              mv "${problem_dir}"* "$dest/"
             fi
-            
+
+            if ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
+              echo "  - Found CSharp file."
+              dest="CSharp/${base_name}"
+              mkdir -p "$dest"
+              mv "${problem_dir}"* "$dest/"
+            fi
           done
 
-          # 4. Remove as pastas de problemas originais que agora estão vazias
-          # Apenas diretórios no nível raiz, que estão vazios.
-          find . -maxdepth 1 -mindepth 1 -type d -empty -not -path './.git*' -not -path './SQL*' -not -path './Python*' -not -path './CSharp*' -exec rm -rf {} +
-
-      - name: Commit e Push das mudanças
+      - name: Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -73,5 +66,5 @@ jobs:
             git commit -m "chore: organize solutions into language-specific directories"
             git push
           else
-            echo "Nenhuma mudança para commitar."
+            echo "No changes to commit."
           fi
