@@ -11,6 +11,7 @@ Este repositório contém soluções para diversos problemas do LeetCode, organi
 
 - Criar um histórico de estudos e evolução pessoal.
 
+
 📂 Estrutura do Repositório
 
 Cada pasta corresponde a uma categoria ou linguagem.
@@ -18,6 +19,7 @@ Cada pasta corresponde a uma categoria ou linguagem.
 Os arquivos seguem a nomeação baseada no título do problema no LeetCode.
 
 Quando aplicável, há comentários explicando a solução e complexidade.
+
 
 🚀 Tecnologias / Linguagens
 
@@ -28,6 +30,7 @@ Python
 C#
 
 Outras conforme os desafios.
+
 
 📝 Observações
 
