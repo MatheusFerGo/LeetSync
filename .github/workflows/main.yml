@@ -1,4 +1,4 @@
-name: Organize Solutions by Language
+name: Organize Solutions by Language Folder
 
 on:
   push:
@@ -11,22 +11,64 @@ jobs:
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Organizar arquivos por linguagem
+      - name: Organizar pastas de problemas em diretórios de linguagem
         run: |
-          mkdir -p sql python csharp
-          # move arquivos .sql para sql/
-          find . -maxdepth 1 -name "*.sql" -exec mv {} sql/ \;
-          # move arquivos .py para python/
-          find . -maxdepth 1 -name "*.py" -exec mv {} python/ \;
-          # move arquivos .cs para csharp/
-          find . -maxdepth 1 -name "*.cs" -exec mv {} csharp/ \;
+          # 1. Cria os diretórios de nível superior para cada linguagem
+          mkdir -p SQL Python CSharp
 
-      - name: Commit mudanças
+          # 2. Percorre cada pasta de problema na raiz do projeto
+          for problem_dir in */; do
+            # Ignora pastas que não são de problemas (como .git, .github, etc.)
+            if [ ! -f "${problem_dir}README.md" ]; then
+              continue
+            fi
+
+            echo "Processando: ${problem_dir}"
+
+            # 3. Para cada tipo de arquivo, cria a estrutura e move os arquivos
+            # Verifica se existem arquivos .sql
+            if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
+              echo "  - Encontrado arquivo SQL."
+              mkdir -p "SQL/${problem_dir}"
+              mv "${problem_dir}"*.sql "SQL/${problem_dir}/"
+              # Copia o README para o novo local
+              cp "${problem_dir}README.md" "SQL/${problem_dir}/"
+            fi
+            
+            # Verifica se existem arquivos .py
+            if ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
+              echo "  - Encontrado arquivo Python."
+              mkdir -p "Python/${problem_dir}"
+              mv "${problem_dir}"*.py "Python/${problem_dir}/"
+              cp "${problem_dir}README.md" "Python/${problem_dir}/"
+            fi
+
+            # Verifica se existem arquivos .cs
+            if ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
+              echo "  - Encontrado arquivo C#."
+              mkdir -p "CSharp/${problem_dir}"
+              mv "${problem_dir}"*.cs "CSharp/${problem_dir}/"
+              cp "${problem_dir}README.md" "CSharp/${problem_dir}/"
+            fi
+            
+          done
+
+          # 4. Remove as pastas de problemas originais que agora estão vazias
+          # Apenas diretórios no nível raiz, que estão vazios.
+          find . -maxdepth 1 -mindepth 1 -type d -empty -not -path './.git*' -not -path './SQL*' -not -path './Python*' -not -path './CSharp*' -exec rm -rf {} +
+
+      - name: Commit e Push das mudanças
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          
           git add .
-          git commit -m "Organize solutions by language" || echo "No changes"
-          git push
+          
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore: organize solutions into language-specific directories"
+            git push
+          else
+            echo "Nenhuma mudança para commitar."
+          fi
