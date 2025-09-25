@@ -9,49 +9,45 @@ jobs:
   organize:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # Permissão necessária para fazer push
 
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
+        # Adicionamos fetch-depth: 0 para garantir que temos o histórico completo do git
+        # Isso é útil para operações como o rebase.
+        with:
+          fetch-depth: 0
 
       - name: Organize folders into language directories
         run: |
-          # 1. Cria os diretórios de nível superior
+          # 1. Cria os diretórios de nível superior, se não existirem
           mkdir -p SQL Python CSharp
 
-          # 2. Percorre cada pasta de problema
+          # 2. Percorre cada pasta na raiz
           for problem_dir in */; do
-            # Ignora pastas de configuração e as que já foram criadas
+            # Ignora pastas de configuração e as de destino
             if [[ "$problem_dir" == ".git/" || "$problem_dir" == ".github/" || "$problem_dir" == "SQL/" || "$problem_dir" == "Python/" || "$problem_dir" == "CSharp/" ]]; then
               continue
             fi
             
-            # Pega apenas o nome base do diretório, sem a barra "/" no final
             base_name=$(basename "$problem_dir")
             echo "Processing: $base_name"
 
-            # 3. Verifica cada tipo de arquivo e move para a estrutura correta
-            # Usa o $base_name para criar o caminho de destino correto
+            # 3. Verifica o tipo de arquivo e move a pasta usando 'git mv'
+            # 'git mv' é melhor que 'mv' pois mantém o histórico do arquivo no Git
             if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
-              echo "  - Found SQL file."
-              dest="SQL/${base_name}"
-              mkdir -p "$dest"
-              mv "${problem_dir}"* "$dest/"
-            fi
-
-            if ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
-              echo "  - Found Python file."
-              dest="Python/${base_name}"
-              mkdir -p "$dest"
-              mv "${problem_dir}"* "$dest/"
-            fi
-
-            if ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
-              echo "  - Found CSharp file."
-              dest="CSharp/${base_name}"
-              mkdir -p "$dest"
-              mv "${problem_dir}"* "$dest/"
+              echo "  - Found SQL file. Moving to SQL/ folder."
+              mkdir -p "SQL/${base_name}"
+              git mv "${problem_dir}"* "SQL/${base_name}/"
+            elif ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
+              echo "  - Found Python file. Moving to Python/ folder."
+              mkdir -p "Python/${base_name}"
+              git mv "${problem_dir}"* "Python/${base_name}/"
+            elif ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
+              echo "  - Found CSharp file. Moving to CSharp/ folder."
+              mkdir -p "CSharp/${base_name}"
+              git mv "${problem_dir}"* "CSharp/${base_name}/"
             fi
           done
 
@@ -60,10 +56,18 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          git add .
-          
-          if ! git diff-index --quiet HEAD; then
-            git commit -m "chore: organize solutions into language-specific directories"
+          # Verifica se há alguma mudança pronta para ser commitada
+          # 'git diff --staged --quiet' é mais preciso aqui
+          if ! git diff --staged --quiet; then
+            echo "Changes found. Committing and pushing..."
+            git commit -m "chore(auto): organize solutions into language-specific directories"
+            
+            # --- CORREÇÃO PRINCIPAL ---
+            # 1. Puxa as alterações mais recentes do GitHub antes de empurrar.
+            #    O '--rebase' evita um "merge commit" desnecessário, mantendo o histórico limpo.
+            git pull --rebase
+            
+            # 2. Empurra as alterações. Adicionamos uma pequena lógica de retry para robustez.
             git push
           else
             echo "No changes to commit."
