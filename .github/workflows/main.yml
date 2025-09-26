@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
-        # Adicionamos fetch-depth: 0 para garantir que temos o histórico completo do git
-        # Isso é útil para operações como o rebase.
         with:
           fetch-depth: 0
 
@@ -34,20 +32,26 @@ jobs:
             base_name=$(basename "$problem_dir")
             echo "Processing: $base_name"
 
-            # 3. Verifica o tipo de arquivo e move a pasta usando 'git mv'
-            # 'git mv' é melhor que 'mv' pois mantém o histórico do arquivo no Git
+            # 3. Verifica o tipo de arquivo e move a pasta
             if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
               echo "  - Found SQL file. Moving to SQL/ folder."
-              mkdir -p "SQL/${base_name}"
-              git mv "${problem_dir}"* "SQL/${base_name}/"
+              # --- CORREÇÃO ---
+              # Remove o diretório de destino se ele já existir para evitar conflitos.
+              rm -rf "SQL/${base_name}"
+              # Move a pasta inteira para o destino correto.
+              git mv "${problem_dir}" "SQL/${base_name}"
+
             elif ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
               echo "  - Found Python file. Moving to Python/ folder."
-              mkdir -p "Python/${base_name}"
-              git mv "${problem_dir}"* "Python/${base_name}/"
+              # --- CORREÇÃO ---
+              rm -rf "Python/${base_name}"
+              git mv "${problem_dir}" "Python/${base_name}"
+
             elif ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
               echo "  - Found CSharp file. Moving to CSharp/ folder."
-              mkdir -p "CSharp/${base_name}"
-              git mv "${problem_dir}"* "CSharp/${base_name}/"
+              # --- CORREÇÃO ---
+              rm -rf "CSharp/${base_name}"
+              git mv "${problem_dir}" "CSharp/${base_name}"
             fi
           done
 
@@ -56,18 +60,18 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
+          # Adiciona todas as mudanças (movimentações, etc.) ao staging area.
+          # Usar 'git add -A' garante que arquivos deletados também sejam registrados.
+          git add -A
+
           # Verifica se há alguma mudança pronta para ser commitada
-          # 'git diff --staged --quiet' é mais preciso aqui
           if ! git diff --staged --quiet; then
             echo "Changes found. Committing and pushing..."
             git commit -m "chore(auto): organize solutions into language-specific directories"
             
-            # --- CORREÇÃO PRINCIPAL ---
-            # 1. Puxa as alterações mais recentes do GitHub antes de empurrar.
-            #    O '--rebase' evita um "merge commit" desnecessário, mantendo o histórico limpo.
+            # Puxa as alterações mais recentes antes de empurrar para evitar conflitos.
             git pull --rebase
             
-            # 2. Empurra as alterações. Adicionamos uma pequena lógica de retry para robustez.
             git push
           else
             echo "No changes to commit."
