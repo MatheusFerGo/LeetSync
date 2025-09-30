@@ -1,7 +1,8 @@
-# generate_readme.py
+# generate_readme.py (versão com "Últimas 5")
 import os
 import re
 from datetime import datetime
+import subprocess # <--- ADICIONADO para rodar comandos git
 
 # --- Configuração ---
 LANGUAGES = {
@@ -24,6 +25,18 @@ def get_link_from_readme(path):
         return None
     return None
 
+# --- NOVA FUNÇÃO para pegar a data do commit ---
+def get_folder_commit_date(path):
+    """Pega a data do último commit que afetou a pasta."""
+    try:
+        # Comando git para pegar a data do último commit no formato ISO 8601
+        command = ['git', 'log', '-1', '--format=%cI', '--', path]
+        result = subprocess.run(command, capture_output=True, text=True, check=True)
+        return result.stdout.strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        # Retorna uma data antiga caso o git falhe, para que fique no final da lista
+        return "0000-00-00T00:00:00Z"
+
 # --- Lógica Principal ---
 def main():
     solutions = []
@@ -41,10 +54,11 @@ def main():
                         "lang_name": lang,
                         "lang_emoji": emoji,
                         "diff": diff,
-                        "link": get_link_from_readme(readme_path) or "#"
+                        "link": get_link_from_readme(readme_path) or "#",
+                        "date": get_folder_commit_date(problem_path) # <--- ADICIONADO
                     })
 
-    # 2. Calcular estatísticas
+    # 2. Calcular estatísticas (continua igual)
     stats = {diff: 0 for diff in DIFFICULTIES}
     for s in solutions:
         stats[s['diff']] += 1
@@ -53,22 +67,7 @@ def main():
     # 3. Construir o conteúdo do README
     readme_content = f"""# 🧩 Soluções de Exercícios - LeetCode
 
-Este repositório contém minhas soluções para diversos problemas da plataforma LeetCode, servindo como um registro do meu progresso e aprendizado contínuo em algoritmos e estruturas de dados.
-
----
-
-### 📊 Progresso Atual
-
-| Categoria | Problemas Resolvidos |
-| :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | {stats['Easy']} |
-| <g-emoji>🟠</g-emoji> **Médio** | {stats['Medium']} |
-| <g-emoji>🔴</g-emoji> **Difícil** | {stats['Hard']} |
-| **Total** | **{total_solved}** |
-
-*(Atualizado pela última vez em: {datetime.now().strftime('%Y-%m-%d')})*
-
----
+Este repositório contém minhas soluções para diversos problemas da plataforma LeetCode.
 
 ### 📂 Estrutura do Repositório
 
@@ -90,10 +89,22 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 -   As soluções apresentadas são de minha autoria e podem ter abordagens diferentes das soluções oficiais ou mais otimizadas.
 -   Este repositório está em constante atualização à medida que novos desafios são resolvidos.
+---
+
+### 📊 Progresso Atual
+
+| Categoria | Problemas Resolvidos |
+| :--- | :---: |
+| <g-emoji>🟢</g-emoji> **Fácil** | {stats['Easy']} |
+| <g-emoji>🟠</g-emoji> **Médio** | {stats['Medium']} |
+| <g-emoji>🔴</g-emoji> **Difícil** | {stats['Hard']} |
+| **Total** | **{total_solved}** |
+
+*(Atualizado pela última vez em: {datetime.now().strftime('%Y-%m-%d')})*
 
 ---
 
-### 📚 Lista de Soluções\n\n"""
+### 📚 Últimas 5 Soluções Adicionadas por Linguagem\n\n""" # <--- TÍTULO ATUALIZADO
 
     # Agrupar soluções por linguagem
     solutions_by_lang = {lang: [] for lang in LANGUAGES}
@@ -103,7 +114,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
     for lang, lang_solutions in solutions_by_lang.items():
         if lang_solutions:
             readme_content += f"### {LANGUAGES[lang]} {lang}\n"
-            for s in lang_solutions:
+            
+            # --- LÓGICA MODIFICADA: Ordenar por data e pegar os 5 primeiros ---
+            sorted_solutions = sorted(lang_solutions, key=lambda x: x['date'], reverse=True)
+            for s in sorted_solutions[:5]: # Pega apenas os 5 primeiros da lista ordenada
                 readme_content += f"- [{s['name']} `({s['diff']})`]({s['link']})\n"
             readme_content += "\n"
 
