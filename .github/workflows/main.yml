@@ -19,31 +19,32 @@ jobs:
 
       - name: Organize solutions into language and difficulty directories
         run: |
-          # 1. Cria os diretórios de destino para evitar erros
+          # ATIVA O MODO DE DEBUG - A linha mais importante!
+          set -x
+
+          # O resto do seu script...
           for lang in SQL Python CSharp; do
             mkdir -p "$lang/Easy" "$lang/Medium" "$lang/Hard"
           done
 
-          # 2. Percorre cada pasta de problema na raiz
           for problem_dir in */; do
-            # Ignora pastas de configuração e as de destino
             if [[ "$problem_dir" == ".git/" || "$problem_dir" == ".github/" || "$problem_dir" == "SQL/" || "$problem_dir" == "Python/" || "$problem_dir" == "CSharp/" ]]; then
               continue
             fi
             
+            echo "Debug: Processing folder -> '$problem_dir'"
             base_name=$(basename "$problem_dir")
             echo "Processing: $base_name"
 
-            # 3. EXTRAI A DIFICULDADE do README.md
             readme_file="${problem_dir}README.md"
-            difficulty="" # Reseta a variável
+            difficulty=""
             if [[ -f "$readme_file" ]]; then
-              # Procura pela string 'Difficulty-Easy', 'Difficulty-Medium', etc. e extrai a dificuldade
-              difficulty=$(grep -o 'Difficulty-[^']+' "$readme_file" | head -n 1 | cut -d'-' -f2)
-              if [[ -n "$difficulty" ]]; then
+              difficulty_line=$(grep -o 'Difficulty-Easy\|Difficulty-Medium\|Difficulty-Hard' "$readme_file" | head -n 1)
+              if [[ -n "$difficulty_line" ]]; then
+                difficulty=$(echo "$difficulty_line" | cut -d'-' -f2)
                 echo "  - Difficulty found: $difficulty"
               else
-                echo "  - Difficulty not found in README. Skipping."
+                echo "  - Difficulty pattern not found in README. Skipping."
                 continue
               fi
             else
@@ -51,7 +52,6 @@ jobs:
               continue
             fi
 
-            # 4. Verifica o tipo de arquivo e move a pasta para o destino correto
             destination_path=""
             if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
               destination_path="SQL/${difficulty}"
@@ -61,12 +61,9 @@ jobs:
               destination_path="CSharp/${difficulty}"
             fi
 
-            # 5. Move a pasta se um destino válido foi encontrado
             if [[ -n "$destination_path" ]]; then
               echo "  - Moving to ${destination_path}/"
-              # Cria o diretório de destino final, caso ainda não exista
               mkdir -p "${destination_path}"
-              # Move a pasta usando git mv para manter o histórico
               git mv "${problem_dir}" "${destination_path}/"
             fi
           done
