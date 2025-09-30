@@ -2,6 +2,17 @@
 
 Este repositório contém minhas soluções para diversos problemas da plataforma LeetCode.
 
+### 📊 Progresso Atual
+
+| Categoria | Problemas Resolvidos |
+| :--- | :---: |
+| <g-emoji>🟢</g-emoji> **Fácil** | 20 |
+| <g-emoji>🟠</g-emoji> **Médio** | 1 |
+| <g-emoji>🔴</g-emoji> **Difícil** | 0 |
+| **Total** | **21** |
+
+*(Atualizado pela última vez em: 2025-09-30)*
+
 ### 📂 Estrutura do Repositório
 
 -   As soluções são organizadas primeiro por linguagem (ex: `Python`, `SQL`) e depois por dificuldade (ex: `Easy`, `Medium`).
@@ -22,18 +33,6 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 -   As soluções apresentadas são de minha autoria e podem ter abordagens diferentes das soluções oficiais ou mais otimizadas.
 -   Este repositório está em constante atualização à medida que novos desafios são resolvidos.
----
-
-### 📊 Progresso Atual
-
-| Categoria | Problemas Resolvidos |
-| :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 20 |
-| <g-emoji>🟠</g-emoji> **Médio** | 1 |
-| <g-emoji>🔴</g-emoji> **Difícil** | 0 |
-| **Total** | **21** |
-
-*(Atualizado pela última vez em: 2025-09-30)*
 
 ---
 
