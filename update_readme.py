@@ -1,30 +1,23 @@
 import os
 from datetime import datetime
-import locale
 
-# --- FUNÇÃO AUXILIAR PARA SUBSTITUIR TEXTO ---
-def replace_between(content, start_tag, end_tag, new_value):
+# --- NOVA FUNÇÃO AUXILIAR, MAIS ROBUSTA ---
+def replace_between_robust(content, start_tag, end_tag, new_value):
     """
-    Encontra o texto entre duas tags e o substitui por um novo valor.
+    Usa split() para substituir o conteúdo de forma segura, sem quebrar a formatação.
     """
     try:
-        start_index = content.index(start_tag) + len(start_tag)
-        end_index = content.index(end_tag)
-
-        # Constrói a nova string
-        new_content = content[:start_index] + str(new_value) + content[end_index:]
-        return new_content
+        # Divide o conteúdo em duas partes, antes e depois da tag de início
+        before, after = content.split(start_tag)
+        # Divide a segunda parte para isolar o conteúdo antigo
+        _, after = after.split(end_tag)
+        # Remonta a string com o novo valor
+        return before + start_tag + str(new_value) + end_tag + after
     except ValueError:
-        print(f"Aviso: As tags '{start_tag}' ou '{end_tag}' não foram encontradas. Pulando esta substituição.")
+        print(f"Aviso: Não foi possível encontrar os marcadores '{start_tag}' e '{end_tag}'. Pulando esta substituição.")
         return content
 
 # --------------------------------------------------------------------
-
-# Garante que o mês seja escrito em português
-try:
-    locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
-except locale.Error:
-    print("Locale pt_BR.UTF-8 não suportado, usando o padrão.")
 
 # A lógica de contagem de arquivos permanece a mesma
 language_dirs = ["Python", "SQL", "CSharp"]
@@ -49,15 +42,15 @@ except FileNotFoundError:
     print("Erro: README.md não encontrado!")
     exit(1)
 
-# Usa a nova função para substituir os valores
-readme_content = replace_between(readme_content, "", "", counts['Easy'])
-readme_content = replace_between(readme_content, "", "", counts['Medium'])
-readme_content = replace_between(readme_content, "", "", counts['Hard'])
-readme_content = replace_between(readme_content, "", "", total_solved)
+# Usa a nova função robusta para substituir os valores
+readme_content = replace_between_robust(readme_content, "", "", counts['Easy'])
+readme_content = replace_between_robust(readme_content, "", "", counts['Medium'])
+readme_content = replace_between_robust(readme_content, "", "", counts['Hard'])
+readme_content = replace_between_robust(readme_content, "", "", total_solved)
 
-# Atualiza a data
-current_date = datetime.now().strftime("%d de %B de %Y")
-readme_content = replace_between(readme_content, "", "", current_date)
+# Atualiza a data para um formato universal e seguro
+current_date = datetime.now().strftime("%Y-%m-%d")
+readme_content = replace_between_robust(readme_content, "", "", current_date)
 
 # Escreve o novo conteúdo de volta no README.md
 with open("README.md", "w", encoding="utf-8") as f:
