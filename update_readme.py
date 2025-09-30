@@ -1,20 +1,36 @@
 import os
-import re
 from datetime import datetime
 import locale
+
+# --- FUNÇÃO AUXILIAR PARA SUBSTITUIR TEXTO ---
+def replace_between(content, start_tag, end_tag, new_value):
+    """
+    Encontra o texto entre duas tags e o substitui por um novo valor.
+    """
+    try:
+        start_index = content.index(start_tag) + len(start_tag)
+        end_index = content.index(end_tag)
+
+        # Constrói a nova string
+        new_content = content[:start_index] + str(new_value) + content[end_index:]
+        return new_content
+    except ValueError:
+        print(f"Aviso: As tags '{start_tag}' ou '{end_tag}' não foram encontradas. Pulando esta substituição.")
+        return content
+
+# --------------------------------------------------------------------
 
 # Garante que o mês seja escrito em português
 try:
     locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 except locale.Error:
-    print("Locale pt_BR.UTF-8 not supported, using default.")
+    print("Locale pt_BR.UTF-8 não suportado, usando o padrão.")
 
-# Diretórios das linguagens a serem escaneadas
+# A lógica de contagem de arquivos permanece a mesma
 language_dirs = ["Python", "SQL", "CSharp"]
 difficulties = ["Easy", "Medium", "Hard"]
 counts = {diff: 0 for diff in difficulties}
 
-# Loop para contar os arquivos em cada subdiretório de dificuldade
 for lang_dir in language_dirs:
     if os.path.isdir(lang_dir):
         for difficulty in difficulties:
@@ -33,18 +49,15 @@ except FileNotFoundError:
     print("Erro: README.md não encontrado!")
     exit(1)
 
+# Usa a nova função para substituir os valores
+readme_content = replace_between(readme_content, "", "", counts['Easy'])
+readme_content = replace_between(readme_content, "", "", counts['Medium'])
+readme_content = replace_between(readme_content, "", "", counts['Hard'])
+readme_content = replace_between(readme_content, "", "", total_solved)
 
-# --- CORREÇÃO ESTÁ AQUI ---
-# As linhas abaixo foram corrigidas para usar o padrão de busca correto com os comentários HTML.
-
-readme_content = re.sub(r"()(.*)()", f"\\1{counts['Easy']}\\3", readme_content)
-readme_content = re.sub(r"()(.*)()", f"\\1{counts['Medium']}\\3", readme_content)
-readme_content = re.sub(r"()(.*)()", f"\\1{counts['Hard']}\\3", readme_content)
-readme_content = re.sub(r"()(.*)()", f"\\1{total_solved}\\3", readme_content)
-
-# Atualiza a data da última execução
+# Atualiza a data
 current_date = datetime.now().strftime("%d de %B de %Y")
-readme_content = re.sub(r"()(.*)()", f"\\1{current_date}\\3", readme_content)
+readme_content = replace_between(readme_content, "", "", current_date)
 
 # Escreve o novo conteúdo de volta no README.md
 with open("README.md", "w", encoding="utf-8") as f:
