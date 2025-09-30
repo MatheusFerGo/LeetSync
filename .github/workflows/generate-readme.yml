@@ -75,6 +75,6 @@ jobs:
       - name: Commitar e fazer push das alterações
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(auto): 🤖 Processa novas soluções e atualiza o README"
+          commit_message: "chore(auto): Processa novas soluções e atualiza o README"
           commit_user_name: GitHub Actions Bot
           commit_user_email: actions-bot@github.com
