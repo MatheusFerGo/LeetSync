@@ -1,4 +1,4 @@
-30 de September de 20250000# 🧩 Soluções de Exercícios - LeetCode
+# 🧩 Soluções de Exercícios - LeetCode
 
 Este repositório contém minhas soluções para diversos problemas da plataforma LeetCode, servindo como um registro do meu progresso e aprendizado contínuo em algoritmos e estruturas de dados.
 
@@ -8,12 +8,12 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria                                                                 | Problemas Resolvidos |
 | :------------------------------------------------------------------------ | :------------------: |
-| <g-emoji>🟢</g-emoji> **Fácil** |        *XX* |
-| <g-emoji>🟠</g-emoji> **Médio** |        *YY* |
-| <g-emoji>🔴</g-emoji> **Difícil** |        *ZZ* |
-| **Total** |      **XYZ** |
+| <g-emoji>🟢</g-emoji> **Fácil** |        %%XX%% |
+| <g-emoji>🟠</g-emoji> **Médio** |        &&YY&& |
+| <g-emoji>🔴</g-emoji> **Difícil** |        @@ZZ@@ |
+| **Total** |      ??XYZ?? |
 
-*(Atualizado pela última vez em: 30 de setembro de 2025)*
+*+(Atualizado pela última vez em: 30 de setembro de 2025)+*
 
 ---
 
