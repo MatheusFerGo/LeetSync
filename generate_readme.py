@@ -69,6 +69,17 @@ def main():
 
 Este repositório contém minhas soluções para diversos problemas da plataforma LeetCode.
 
+### 📊 Progresso Atual
+
+| Categoria | Problemas Resolvidos |
+| :--- | :---: |
+| <g-emoji>🟢</g-emoji> **Fácil** | {stats['Easy']} |
+| <g-emoji>🟠</g-emoji> **Médio** | {stats['Medium']} |
+| <g-emoji>🔴</g-emoji> **Difícil** | {stats['Hard']} |
+| **Total** | **{total_solved}** |
+
+*(Atualizado pela última vez em: {datetime.now().strftime('%Y-%m-%d')})*
+
 ### 📂 Estrutura do Repositório
 
 -   As soluções são organizadas primeiro por linguagem (ex: `Python`, `SQL`) e depois por dificuldade (ex: `Easy`, `Medium`).
@@ -89,18 +100,6 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 -   As soluções apresentadas são de minha autoria e podem ter abordagens diferentes das soluções oficiais ou mais otimizadas.
 -   Este repositório está em constante atualização à medida que novos desafios são resolvidos.
----
-
-### 📊 Progresso Atual
-
-| Categoria | Problemas Resolvidos |
-| :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | {stats['Easy']} |
-| <g-emoji>🟠</g-emoji> **Médio** | {stats['Medium']} |
-| <g-emoji>🔴</g-emoji> **Difícil** | {stats['Hard']} |
-| **Total** | **{total_solved}** |
-
-*(Atualizado pela última vez em: {datetime.now().strftime('%Y-%m-%d')})*
 
 ---
 
