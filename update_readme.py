@@ -43,10 +43,10 @@ except FileNotFoundError:
     exit(1)
 
 # Usa a nova função robusta para substituir os valores
-readme_content = replace_between_robust(readme_content, "", "", counts['Easy'])
-readme_content = replace_between_robust(readme_content, "", "", counts['Medium'])
-readme_content = replace_between_robust(readme_content, "", "", counts['Hard'])
-readme_content = replace_between_robust(readme_content, "", "", total_solved)
+readme_content = replace_between_robust(readme_content, "%%", "%%", counts['Easy'])
+readme_content = replace_between_robust(readme_content, "&&", "&&", counts['Medium'])
+readme_content = replace_between_robust(readme_content, "@@", "@@", counts['Hard'])
+readme_content = replace_between_robust(readme_content, "??", "??", total_solved)
 
 # Atualiza a data para um formato universal e seguro
 current_date = datetime.now().strftime("%Y-%m-%d")
