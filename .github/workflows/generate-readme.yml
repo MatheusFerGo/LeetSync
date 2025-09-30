@@ -1,0 +1,32 @@
+name: Generate Dynamic README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run script to generate README
+        run: python generate_readme.py
+
+      - name: Commit and push the updated README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs(readme): ✨ auto-generate and update README"
+          file_pattern: README.md # Commita apenas se o README.md mudar
+          commit_user_name: GitHub Actions Bot
+          commit_user_email: actions-bot@github.com
