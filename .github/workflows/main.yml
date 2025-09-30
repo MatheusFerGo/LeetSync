@@ -1,4 +1,4 @@
-name: Organize LeetCode Solutions
+name: Processar e Organizar Soluções do LeetCode
 
 on:
   push:
@@ -6,52 +6,42 @@ on:
       - main
 
 jobs:
-  organize:
+  process:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permissão necessária para fazer push
+      contents: write
 
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Necessário para o git ter o histórico completo
+          fetch-depth: 0
 
-      - name: Organize solutions into language and difficulty directories
+      # --- PASSO 1: ORGANIZA AS PASTAS ---
+      - name: Organizar soluções em pastas de linguagem e dificuldade
+        id: organize_folders # Adicionamos um ID para saber se algo foi movido
         run: |
-          # ATIVA O MODO DE DEBUG - A linha mais importante!
-          set -x
-
-          # O resto do seu script...
-          for lang in SQL Python CSharp; do
-            mkdir -p "$lang/Easy" "$lang/Medium" "$lang/Hard"
-          done
-
+          echo "Iniciando organização das pastas..."
+          changes_made=false
           for problem_dir in */; do
             if [[ "$problem_dir" == ".git/" || "$problem_dir" == ".github/" || "$problem_dir" == "SQL/" || "$problem_dir" == "Python/" || "$problem_dir" == "CSharp/" ]]; then
               continue
             fi
             
-            echo "Debug: Processing folder -> '$problem_dir'"
+            # ... (Toda a sua lógica de mover pastas que já funciona) ...
             base_name=$(basename "$problem_dir")
-            echo "Processing: $base_name"
-
             readme_file="${problem_dir}README.md"
             difficulty=""
             if [[ -f "$readme_file" ]]; then
               difficulty_line=$(grep -o 'Difficulty-Easy\|Difficulty-Medium\|Difficulty-Hard' "$readme_file" | head -n 1)
               if [[ -n "$difficulty_line" ]]; then
                 difficulty=$(echo "$difficulty_line" | cut -d'-' -f2)
-                echo "  - Difficulty found: $difficulty"
               else
-                echo "  - Difficulty pattern not found in README. Skipping."
                 continue
               fi
             else
-              echo "  - README.md not found. Skipping."
               continue
             fi
-
             destination_path=""
             if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
               destination_path="SQL/${difficulty}"
@@ -60,27 +50,39 @@ jobs:
             elif ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
               destination_path="CSharp/${difficulty}"
             fi
-
             if [[ -n "$destination_path" ]]; then
-              echo "  - Moving to ${destination_path}/"
+              echo "  - Movendo ${base_name} para ${destination_path}/"
               mkdir -p "${destination_path}"
               git mv "${problem_dir}" "${destination_path}/"
+              changes_made=true
             fi
           done
+          echo "changes_made=$changes_made" >> $GITHUB_OUTPUT
 
-      - name: Commit and Push changes
+      # --- PASSO 2: ATUALIZA O README (SÓ RODA SE HOUVE MUDANÇAS) ---
+      - name: Preparar Python
+        if: steps.organize_folders.outputs.changes_made == 'true'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Rodar script para atualizar as estatísticas do README
+        if: steps.organize_folders.outputs.changes_made == 'true'
+        run: python update_readme.py
+
+      # --- PASSO 3: FAZ O COMMIT DE TODAS AS MUDANÇAS ---
+      - name: Commitar e fazer push das alterações
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
           git add -A
-
-          # Verifica se há alguma mudança para commitar
+          
           if ! git diff --staged --quiet; then
-            echo "Changes found. Committing and pushing..."
-            git commit -m "chore(auto): organize solutions into difficulty folders"
+            echo "Alterações encontradas. Commitando..."
+            git commit -m "chore(auto): organizar soluções e atualizar estatísticas"
             git pull --rebase
             git push
           else
-            echo "No changes to commit."
+            echo "Nenhuma nova solução para processar."
           fi
