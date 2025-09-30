@@ -1,4 +1,4 @@
-name: Limpar e Reorganizar Soluções Antigas
+name: Clean and Reorganize Previous Solutions
 
 # A MÁGICA ESTÁ AQUI: Este workflow só roda quando você clica no botão.
 on:
