@@ -20,7 +20,6 @@ for lang_dir in language_dirs:
         for difficulty in difficulties:
             path = os.path.join(lang_dir, difficulty)
             if os.path.isdir(path):
-                # Conta apenas arquivos, ignorando subdiretórios se houver
                 num_files = len([name for name in os.listdir(path) if os.path.isfile(os.path.join(path, name))])
                 counts[difficulty] += num_files
 
@@ -35,7 +34,9 @@ except FileNotFoundError:
     exit(1)
 
 
-# Substitui os valores de contagem usando os marcadores
+# --- CORREÇÃO ESTÁ AQUI ---
+# As linhas abaixo foram corrigidas para usar o padrão de busca correto com os comentários HTML.
+
 readme_content = re.sub(r"()(.*)()", f"\\1{counts['Easy']}\\3", readme_content)
 readme_content = re.sub(r"()(.*)()", f"\\1{counts['Medium']}\\3", readme_content)
 readme_content = re.sub(r"()(.*)()", f"\\1{counts['Hard']}\\3", readme_content)
