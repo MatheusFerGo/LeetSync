@@ -6,14 +6,14 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 ### 📊 Progresso Atual
 
-| Categoria                                                                 | Problemas Resolvidos |
-| :------------------------------------------------------------------------ | :------------------: |
-| <g-emoji>🟢</g-emoji> **Fácil** |        %%XX%% |
-| <g-emoji>🟠</g-emoji> **Médio** |        &&YY&& |
-| <g-emoji>🔴</g-emoji> **Difícil** |        @@ZZ@@ |
-| **Total** |      ??XYZ?? |
+| Categoria | Problemas Resolvidos |
+| :--- | :---: |
+| <g-emoji>🟢</g-emoji> **Fácil** | 0|
+| <g-emoji>🟠</g-emoji> **Médio** | 0|
+| <g-emoji>🔴</g-emoji> **Difícil** | 0|
+| **Total** | **0** |
 
-*+(Atualizado pela última vez em: 30 de setembro de 2025)+*
+*(Atualizado pela última vez em: YYYY-MM-DD)*
 
 ---
 
