@@ -1,39 +1,47 @@
-🧩 Resolução de Exercícios - LeetCode
+# 🧩 Soluções de Exercícios - LeetCode
 
-Este repositório contém soluções para diversos problemas do LeetCode, organizados por linguagem
+Este repositório contém minhas soluções para diversos problemas da plataforma LeetCode, servindo como um registro do meu progresso e aprendizado contínuo em algoritmos e estruturas de dados.
 
+---
 
-📖 Objetivo
+### 📊 Progresso Atual
 
-- Praticar lógica de programação e algoritmos.
+| Categoria                                                                 | Problemas Resolvidos |
+| :------------------------------------------------------------------------ | :------------------: |
+| <g-emoji>🟢</g-emoji> **Fácil** |        *XX* |
+| <g-emoji>🟠</g-emoji> **Médio** |        *YY* |
+| <g-emoji>🔴</g-emoji> **Difícil** |        *ZZ* |
+| **Total** |      **XYZ** |
 
-- Fazer a manutenção contínua dos meus conhecimentos em SQL, Python, C# e outras linguagens.
+*(Atualizado pela última vez em: 30 de setembro de 2025)*
 
-- Criar um histórico de estudos e evolução pessoal.
+---
 
+### 🎯 Objetivo
 
-📂 Estrutura do Repositório
+-   Praticar e aprimorar minha lógica de programação e conhecimento em algoritmos.
+-   Realizar a manutenção contínua dos meus conhecimentos em SQL, Python, C# e outras linguagens.
+-   Criar um histórico de estudos que demonstre minha evolução pessoal e técnica.
 
-Cada pasta corresponde a uma categoria ou linguagem.
+---
 
-Os arquivos seguem a nomeação baseada no título do problema no LeetCode.
+### 📂 Estrutura do Repositório
 
-Quando aplicável, há comentários explicando a solução e complexidade.
+-   Cada pasta principal corresponde a uma linguagem de programação (ex: `SQL`, `Python`, `CSharp`).
+-   Os arquivos de solução são nomeados com base no número e título do problema no LeetCode (ex: `0001-TwoSum.py`).
+-   Quando aplicável, o código inclui comentários explicando a lógica da solução, a complexidade de tempo e espaço.
 
+---
 
-🚀 Tecnologias / Linguagens
+### 🚀 Tecnologias e Linguagens
 
-SQL
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 
-Python
+---
 
-C#
+### 📝 Observações
 
-Outras conforme os desafios.
-
-
-📝 Observações
-
-As soluções são autorais e podem diferir das apresentadas no site.
-
-O repositório está em constante atualização à medida que novos exercícios são resolvidos.
+-   As soluções apresentadas são de minha autoria e podem ter abordagens diferentes das soluções oficiais ou mais otimizadas.
+-   Este repositório está em constante atualização à medida que novos desafios são resolvidos.
