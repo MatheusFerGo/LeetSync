@@ -1,33 +1,14 @@
-name: Processar e Organizar Soluções do LeetCode
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  process:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
-    steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Organizar, Contar e Atualizar README
+- name: Organizar, Contar e Atualizar README
         run: |
           echo "Iniciando processo completo..."
-          set -x # Ativa o modo debug para vermos tudo
+          set -x
 
-          # --- PARTE 1: ORGANIZAR PASTAS (Lógica que já funciona) ---
+          # --- PARTE 1: ORGANIZAR PASTAS ---
+          # (Esta parte está perfeita, não precisa mudar)
           for problem_dir in */; do
             if [[ "$problem_dir" == ".git/" || "$problem_dir" == ".github/" || "$problem_dir" == "SQL/" || "$problem_dir" == "Python/" || "$problem_dir" == "CSharp/" ]]; then
               continue
             fi
-            
             base_name=$(basename "$problem_dir")
             readme_file="${problem_dir}README.md"
             difficulty=""
@@ -41,7 +22,6 @@ jobs:
             else
               continue
             fi
-
             destination_path=""
             if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
               destination_path="SQL/${difficulty}"
@@ -50,47 +30,25 @@ jobs:
             elif ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
               destination_path="CSharp/${difficulty}"
             fi
-
             if [[ -n "$destination_path" ]]; then
-              echo "  - Movendo ${base_name} para ${destination_path}/"
               mkdir -p "${destination_path}"
               git mv "${problem_dir}" "${destination_path}/"
             fi
           done
 
-          # --- PARTE 2: CONTAR SOLUÇÕES (Nova lógica em bash) ---
-          echo "Contando soluções organizadas..."
-          # Usamos 'find' para contar as pastas de solução dentro de cada diretório de dificuldade
-          # O '|| true' e '2>/dev/null' garantem que o script não falhe se uma pasta não existir
+          # --- PARTE 2: CONTAR SOLUÇÕES ---
+          # (Esta parte está perfeita, não precisa mudar)
           EASY_COUNT=$( (find SQL/Easy Python/Easy CSharp/Easy -mindepth 1 -maxdepth 1 -type d 2>/dev/null || true) | wc -l)
           MEDIUM_COUNT=$( (find SQL/Medium Python/Medium CSharp/Medium -mindepth 1 -maxdepth 1 -type d 2>/dev/null || true) | wc -l)
           HARD_COUNT=$( (find SQL/Hard Python/Hard CSharp/Hard -mindepth 1 -maxdepth 1 -type d 2>/dev/null || true) | wc -l)
           TOTAL_COUNT=$((EASY_COUNT + MEDIUM_COUNT + HARD_COUNT))
           CURRENT_DATE=$(date +"%Y-%m-%d")
 
-          echo "Contagem: Fácil=$EASY_COUNT, Médio=$MEDIUM_COUNT, Difícil=$HARD_COUNT, Total=$TOTAL_COUNT"
-
-          # --- PARTE 3: ATUALIZAR O README (Nova lógica com 'sed') ---
-          echo "Atualizando README.md..."
-          # Usamos 'sed' para encontrar os marcadores e substituir o conteúdo
-          sed -i "s|.*|${EASY_COUNT}|g" README.md
-          sed -i "s|.*|${MEDIUM_COUNT}|g" README.md
-          sed -i "s|.*|${HARD_COUNT}|g" README.md
-          sed -i "s|.*|${TOTAL_COUNT}|g" README.md
-          sed -i "s|.*|${CURRENT_DATE}|g" README.md
-
-      - name: Commitar e fazer push das alterações
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          
-          git add -A
-          
-          if ! git diff --staged --quiet; then
-            echo "Alterações encontradas. Commitando..."
-            git commit -m "chore(auto): organizar soluções e atualizar estatísticas"
-            git pull --rebase
-            git push
-          else
-            echo "Nenhuma nova solução para processar."
-          fi
+          # --- PARTE 3: ATUALIZAR O README (COM A CORREÇÃO) ---
+          echo "Atualizando README.md com padrão seguro..."
+          # A CORREÇÃO ESTÁ AQUI: Trocamos o '.*' ganancioso por '[^<]*'
+          sed -i "s|[^<]*|${EASY_COUNT}|g" README.md
+          sed -i "s|[^<]*|${MEDIUM_COUNT}|g" README.md
+          sed -i "s|[^<]*|${HARD_COUNT}|g" README.md
+          sed -i "s|[^<]*|${TOTAL_COUNT}|g" README.md
+          sed -i "s|[^<]*|${CURRENT_DATE}|g" README.md
