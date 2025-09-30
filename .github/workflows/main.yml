@@ -1,4 +1,4 @@
-name: Organize Solutions by Language Folder
+name: Organize LeetCode Solutions
 
 on:
   push:
@@ -15,14 +15,16 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Necessário para o git ter o histórico completo
 
-      - name: Organize folders into language directories
+      - name: Organize solutions into language and difficulty directories
         run: |
-          # 1. Cria os diretórios de nível superior, se não existirem
-          mkdir -p SQL Python CSharp
+          # 1. Cria os diretórios de destino para evitar erros
+          for lang in SQL Python CSharp; do
+            mkdir -p "$lang/Easy" "$lang/Medium" "$lang/Hard"
+          done
 
-          # 2. Percorre cada pasta na raiz
+          # 2. Percorre cada pasta de problema na raiz
           for problem_dir in */; do
             # Ignora pastas de configuração e as de destino
             if [[ "$problem_dir" == ".git/" || "$problem_dir" == ".github/" || "$problem_dir" == "SQL/" || "$problem_dir" == "Python/" || "$problem_dir" == "CSharp/" ]]; then
@@ -32,26 +34,40 @@ jobs:
             base_name=$(basename "$problem_dir")
             echo "Processing: $base_name"
 
-            # 3. Verifica o tipo de arquivo e move a pasta
+            # 3. EXTRAI A DIFICULDADE do README.md
+            readme_file="${problem_dir}README.md"
+            difficulty="" # Reseta a variável
+            if [[ -f "$readme_file" ]]; then
+              # Procura pela string 'Difficulty-Easy', 'Difficulty-Medium', etc. e extrai a dificuldade
+              difficulty=$(grep -o 'Difficulty-[^']+' "$readme_file" | head -n 1 | cut -d'-' -f2)
+              if [[ -n "$difficulty" ]]; then
+                echo "  - Difficulty found: $difficulty"
+              else
+                echo "  - Difficulty not found in README. Skipping."
+                continue
+              fi
+            else
+              echo "  - README.md not found. Skipping."
+              continue
+            fi
+
+            # 4. Verifica o tipo de arquivo e move a pasta para o destino correto
+            destination_path=""
             if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
-              echo "  - Found SQL file. Moving to SQL/ folder."
-              # --- CORREÇÃO ---
-              # Remove o diretório de destino se ele já existir para evitar conflitos.
-              rm -rf "SQL/${base_name}"
-              # Move a pasta inteira para o destino correto.
-              git mv "${problem_dir}" "SQL/${base_name}"
-
+              destination_path="SQL/${difficulty}"
             elif ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
-              echo "  - Found Python file. Moving to Python/ folder."
-              # --- CORREÇÃO ---
-              rm -rf "Python/${base_name}"
-              git mv "${problem_dir}" "Python/${base_name}"
-
+              destination_path="Python/${difficulty}"
             elif ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
-              echo "  - Found CSharp file. Moving to CSharp/ folder."
-              # --- CORREÇÃO ---
-              rm -rf "CSharp/${base_name}"
-              git mv "${problem_dir}" "CSharp/${base_name}"
+              destination_path="CSharp/${difficulty}"
+            fi
+
+            # 5. Move a pasta se um destino válido foi encontrado
+            if [[ -n "$destination_path" ]]; then
+              echo "  - Moving to ${destination_path}/"
+              # Cria o diretório de destino final, caso ainda não exista
+              mkdir -p "${destination_path}"
+              # Move a pasta usando git mv para manter o histórico
+              git mv "${problem_dir}" "${destination_path}/"
             fi
           done
 
@@ -60,18 +76,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          # Adiciona todas as mudanças (movimentações, etc.) ao staging area.
-          # Usar 'git add -A' garante que arquivos deletados também sejam registrados.
           git add -A
 
-          # Verifica se há alguma mudança pronta para ser commitada
+          # Verifica se há alguma mudança para commitar
           if ! git diff --staged --quiet; then
             echo "Changes found. Committing and pushing..."
-            git commit -m "chore(auto): organize solutions into language-specific directories"
-            
-            # Puxa as alterações mais recentes antes de empurrar para evitar conflitos.
+            git commit -m "chore(auto): organize solutions into difficulty folders"
             git pull --rebase
-            
             git push
           else
             echo "No changes to commit."
