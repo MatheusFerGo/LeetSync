@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 20 |
-| <g-emoji>🟠</g-emoji> **Médio** | 1 |
+| <g-emoji>🟠</g-emoji> **Médio** | 2 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 0 |
-| **Total** | **21** |
+| **Total** | **22** |
 
 *(Atualizado pela última vez em: 2025-09-30)*
 
