@@ -1,4 +1,4 @@
-# 🧩 Soluções de Exercícios - LeetCode
+30 de September de 20250000# 🧩 Soluções de Exercícios - LeetCode
 
 Este repositório contém minhas soluções para diversos problemas da plataforma LeetCode, servindo como um registro do meu progresso e aprendizado contínuo em algoritmos e estruturas de dados.
 
