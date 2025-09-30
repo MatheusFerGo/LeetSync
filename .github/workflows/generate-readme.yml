@@ -1,4 +1,4 @@
-name: Generate Dynamic README
+name: Processar Novas Soluções do LeetCode
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  generate:
+  process_and_generate:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -14,19 +14,67 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # --- PASSO 1: ORGANIZA NOVAS PASTAS DA RAIZ ---
+      - name: Organizar novas soluções
+        run: |
+          echo "Procurando por novas soluções na raiz..."
+          set -x # Ativa o modo debug
+          
+          for problem_dir in */; do
+            # Ignora pastas que não são de problemas
+            if [[ "$problem_dir" == ".git/" || "$problem_dir" == ".github/" || "$problem_dir" == "SQL/" || "$problem_dir" == "Python/" || "$problem_dir" == "CSharp/" ]]; then
+              continue
+            fi
+            
+            base_name=$(basename "$problem_dir")
+            readme_file="${problem_dir}README.md"
+            difficulty=""
+            
+            if [[ -f "$readme_file" ]]; then
+              difficulty_line=$(grep -o 'Difficulty-Easy\|Difficulty-Medium\|Difficulty-Hard' "$readme_file" | head -n 1)
+              if [[ -n "$difficulty_line" ]]; then
+                difficulty=$(echo "$difficulty_line" | cut -d'-' -f2)
+              else
+                echo "Dificuldade não encontrada em $base_name. Pulando."
+                continue
+              fi
+            else
+              echo "README.md não encontrado em $base_name. Pulando."
+              continue
+            fi
+
+            destination_path=""
+            if ls "${problem_dir}"*.sql 1> /dev/null 2>&1; then
+              destination_path="SQL/${difficulty}"
+            elif ls "${problem_dir}"*.py 1> /dev/null 2>&1; then
+              destination_path="Python/${difficulty}"
+            elif ls "${problem_dir}"*.cs 1> /dev/null 2>&1; then
+              destination_path="CSharp/${difficulty}"
+            fi
+
+            if [[ -n "$destination_path" ]]; then
+              echo "Movendo ${base_name} para ${destination_path}/"
+              mkdir -p "${destination_path}"
+              git mv "${problem_dir}" "${destination_path}/"
+            fi
+          done
+
+      # --- PASSO 2: GERA O README DINÂMICO ---
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Run script to generate README
+      - name: Executar script para gerar o README
         run: python generate_readme.py
 
-      - name: Commit and push the updated README
+      # --- PASSO 3: FAZ O COMMIT DE TODAS AS ALTERAÇÕES ---
+      - name: Commitar e fazer push das alterações
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs(readme): ✨ auto-generate and update README"
-          file_pattern: README.md # Commita apenas se o README.md mudar
+          commit_message: "chore(auto): 🤖 Processa novas soluções e atualiza o README"
           commit_user_name: GitHub Actions Bot
           commit_user_email: actions-bot@github.com
