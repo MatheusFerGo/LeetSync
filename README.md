@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 22 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 23 |
 | <g-emoji>🟠</g-emoji> **Médio** | 2 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 0 |
-| **Total** | **24** |
+| **Total** | **25** |
 
 *(Atualizado pela última vez em: 2025-10-02)*
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [7 Reverse Integer `(Medium)`](https://leetcode.com/problems/reverse-integer)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [13 Roman To Integer `(Easy)`](https://leetcode.com/problems/roman-to-integer)
 - [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
-- [1537 Maximum Score After Splitting A String `(Easy)`](https://leetcode.com/problems/maximum-score-after-splitting-a-string)
 
 ### 💻 CSharp
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
