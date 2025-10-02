@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
-| <g-emoji>🟠</g-emoji> **Médio** | 2 |
+| <g-emoji>🟠</g-emoji> **Médio** | 3 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 0 |
-| **Total** | **25** |
+| **Total** | **26** |
 
 *(Atualizado pela última vez em: 2025-10-02)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
 
 ### 💻 CSharp
+- [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
 - [1537 Maximum Score After Splitting A String `(Easy)`](https://leetcode.com/problems/maximum-score-after-splitting-a-string)
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
-- [2025 Redistribute Characters To Make All Strings Equal `(Easy)`](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal)
 
 ### 🗄️ SQL
 - [1908 Recyclable And Low Fat Products `(Easy)`](https://leetcode.com/problems/recyclable-and-low-fat-products)
