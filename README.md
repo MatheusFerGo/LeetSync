@@ -6,12 +6,12 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 21 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 22 |
 | <g-emoji>🟠</g-emoji> **Médio** | 2 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 0 |
-| **Total** | **23** |
+| **Total** | **24** |
 
-*(Atualizado pela última vez em: 2025-09-30)*
+*(Atualizado pela última vez em: 2025-10-02)*
 
 ### 📂 Estrutura do Repositório
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [2025 Redistribute Characters To Make All Strings Equal `(Easy)`](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal)
 
 ### 🗄️ SQL
+- [1908 Recyclable And Low Fat Products `(Easy)`](https://leetcode.com/problems/recyclable-and-low-fat-products)
 - [1415 Students And Examinations `(Easy)`](https://leetcode.com/problems/students-and-examinations)
 - [577 Employee Bonus `(Easy)`](https://leetcode.com/problems/employee-bonus)
 - [1153 Product Sales Analysis I `(Easy)`](https://leetcode.com/problems/product-sales-analysis-i)
 - [1509 Replace Employee Id With The Unique Identifier `(Easy)`](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier)
-- [175 Combine Two Tables `(Easy)`](https://leetcode.com/problems/combine-two-tables)
 
