@@ -30,7 +30,8 @@ def get_folder_commit_date(path):
     """Pega a data do último commit que afetou a pasta."""
     try:
         # Comando git para pegar a data do último commit no formato ISO 8601
-        command = ['git', 'log', '-1', '--format=%cI', '--', path]
+        command = ['git', 'log', '-1','--format=%cI','--author=MatheusFerGo','--', path]
+
         result = subprocess.run(command, capture_output=True, text=True, check=True)
         return result.stdout.strip()
     except (subprocess.CalledProcessError, FileNotFoundError):
