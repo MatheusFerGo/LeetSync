@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 
 ### 🗄️ SQL
+- [570 Managers With At Least 5 Direct Reports `(Medium)`](https://leetcode.com/problems/managers-with-at-least-5-direct-reports)
 - [1908 Recyclable And Low Fat Products `(Easy)`](https://leetcode.com/problems/recyclable-and-low-fat-products)
-- [1415 Students And Examinations `(Easy)`](https://leetcode.com/problems/students-and-examinations)
-- [577 Employee Bonus `(Easy)`](https://leetcode.com/problems/employee-bonus)
 - [1153 Product Sales Analysis I `(Easy)`](https://leetcode.com/problems/product-sales-analysis-i)
+- [1415 Students And Examinations `(Easy)`](https://leetcode.com/problems/students-and-examinations)
 - [1509 Replace Employee Id With The Unique Identifier `(Easy)`](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier)
 
