@@ -8,8 +8,8 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
 | <g-emoji>🟠</g-emoji> **Médio** | 3 |
-| <g-emoji>🔴</g-emoji> **Difícil** | 1 |
-| **Total** | **27** |
+| <g-emoji>🔴</g-emoji> **Difícil** | 2 |
+| **Total** | **28** |
 
 *(Atualizado pela última vez em: 2025-10-05)*
 
