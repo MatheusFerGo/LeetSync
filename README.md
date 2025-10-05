@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
-| <g-emoji>🟠</g-emoji> **Médio** | 6 |
+| <g-emoji>🟠</g-emoji> **Médio** | 7 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 2 |
-| **Total** | **31** |
+| **Total** | **32** |
 
 *(Atualizado pela última vez em: 2025-10-05)*
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 - [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [7 Reverse Integer `(Medium)`](https://leetcode.com/problems/reverse-integer)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
-- [13 Roman To Integer `(Easy)`](https://leetcode.com/problems/roman-to-integer)
 
 ### 💻 CSharp
 - [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
