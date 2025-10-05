@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
-| <g-emoji>🟠</g-emoji> **Médio** | 3 |
+| <g-emoji>🟠</g-emoji> **Médio** | 4 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 2 |
-| **Total** | **28** |
+| **Total** | **29** |
 
 *(Atualizado pela última vez em: 2025-10-05)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [13 Roman To Integer `(Easy)`](https://leetcode.com/problems/roman-to-integer)
 
 ### 💻 CSharp
+- [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
 - [1537 Maximum Score After Splitting A String `(Easy)`](https://leetcode.com/problems/maximum-score-after-splitting-a-string)
-- [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 
 ### 🗄️ SQL
 - [570 Managers With At Least 5 Direct Reports `(Medium)`](https://leetcode.com/problems/managers-with-at-least-5-direct-reports)
