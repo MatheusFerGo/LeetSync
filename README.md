@@ -8,10 +8,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
 | <g-emoji>🟠</g-emoji> **Médio** | 3 |
-| <g-emoji>🔴</g-emoji> **Difícil** | 0 |
-| **Total** | **26** |
+| <g-emoji>🔴</g-emoji> **Difícil** | 1 |
+| **Total** | **27** |
 
-*(Atualizado pela última vez em: 2025-10-02)*
+*(Atualizado pela última vez em: 2025-10-05)*
 
 ### 📂 Estrutura do Repositório
 
