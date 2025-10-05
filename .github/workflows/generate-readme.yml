@@ -56,9 +56,23 @@ jobs:
             fi
 
             if [[ -n "$destination_path" ]]; then
-              echo "Movendo ${base_name} para ${destination_path}/"
-              mkdir -p "${destination_path}"
-              git mv "${problem_dir}" "${destination_path}/"
+              # Verifica se o diretório de destino JÁ EXISTE para mesclar os arquivos
+              if [ -d "${destination_path}/${base_name}" ]; then
+                echo "Solução existente encontrada. Mesclando arquivos para ${destination_path}/${base_name}/"
+                
+                # Move o CONTEÚDO da pasta de origem para a de destino.
+                # O `*` garante que o README.md seja sobrescrito e novos arquivos de código sejam adicionados.
+                git mv -f "${problem_dir}"* "${destination_path}/${base_name}/"
+                
+                # Remove a pasta de origem que agora está vazia
+                rmdir "${problem_dir}"
+              
+              # Se NÃO EXISTE, apenas move a pasta inteira como antes
+              else
+                echo "Nova solução. Movendo ${base_name} para ${destination_path}/"
+                mkdir -p "${destination_path}"
+                git mv "${problem_dir}" "${destination_path}/"
+              fi
             fi
           done
 
