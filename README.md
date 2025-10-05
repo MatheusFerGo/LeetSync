@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [13 Roman To Integer `(Easy)`](https://leetcode.com/problems/roman-to-integer)
 
 ### 💻 CSharp
+- [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 - [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
-- [1537 Maximum Score After Splitting A String `(Easy)`](https://leetcode.com/problems/maximum-score-after-splitting-a-string)
 
 ### 🗄️ SQL
 - [176 Second Highest Salary `(Medium)`](https://leetcode.com/problems/second-highest-salary)
