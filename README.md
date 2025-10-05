@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [7 Reverse Integer `(Medium)`](https://leetcode.com/problems/reverse-integer)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [13 Roman To Integer `(Easy)`](https://leetcode.com/problems/roman-to-integer)
-- [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
 
 ### 💻 CSharp
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
