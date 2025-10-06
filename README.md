@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
-| <g-emoji>🟠</g-emoji> **Médio** | 9 |
+| <g-emoji>🟠</g-emoji> **Médio** | 10 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 2 |
-| **Total** | **34** |
+| **Total** | **35** |
 
 *(Atualizado pela última vez em: 2025-10-06)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [7 Reverse Integer `(Medium)`](https://leetcode.com/problems/reverse-integer)
 
 ### 💻 CSharp
+- [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 - [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 - [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
-- [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
 
 ### 🗄️ SQL
 - [177 Nth Highest Salary `(Medium)`](https://leetcode.com/problems/nth-highest-salary)
