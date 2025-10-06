@@ -7,11 +7,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
-| <g-emoji>🟠</g-emoji> **Médio** | 7 |
+| <g-emoji>🟠</g-emoji> **Médio** | 8 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 2 |
-| **Total** | **32** |
+| **Total** | **33** |
 
-*(Atualizado pela última vez em: 2025-10-05)*
+*(Atualizado pela última vez em: 2025-10-06)*
 
 ### 📂 Estrutura do Repositório
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [14 Longest Common Prefix `(Easy)`](https://leetcode.com/problems/longest-common-prefix)
 
 ### 🗄️ SQL
+- [177 Nth Highest Salary `(Medium)`](https://leetcode.com/problems/nth-highest-salary)
 - [176 Second Highest Salary `(Medium)`](https://leetcode.com/problems/second-highest-salary)
 - [570 Managers With At Least 5 Direct Reports `(Medium)`](https://leetcode.com/problems/managers-with-at-least-5-direct-reports)
 - [1908 Recyclable And Low Fat Products `(Easy)`](https://leetcode.com/problems/recyclable-and-low-fat-products)
 - [1153 Product Sales Analysis I `(Easy)`](https://leetcode.com/problems/product-sales-analysis-i)
-- [1415 Students And Examinations `(Easy)`](https://leetcode.com/problems/students-and-examinations)
 
