@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
-| <g-emoji>🟠</g-emoji> **Médio** | 12 |
+| <g-emoji>🟠</g-emoji> **Médio** | 13 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 2 |
-| **Total** | **37** |
+| **Total** | **38** |
 
 *(Atualizado pela última vez em: 2025-10-13)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 
 ### 💻 CSharp
+- [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 - [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 - [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
-- [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 
 ### 🗄️ SQL
 - [178 Rank Scores `(Medium)`](https://leetcode.com/problems/rank-scores)
