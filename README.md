@@ -7,11 +7,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
-| <g-emoji>🟠</g-emoji> **Médio** | 10 |
+| <g-emoji>🟠</g-emoji> **Médio** | 11 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 2 |
-| **Total** | **35** |
+| **Total** | **36** |
 
-*(Atualizado pela última vez em: 2025-10-06)*
+*(Atualizado pela última vez em: 2025-10-13)*
 
 ### 📂 Estrutura do Repositório
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 
 ### 🗄️ SQL
+- [178 Rank Scores `(Medium)`](https://leetcode.com/problems/rank-scores)
 - [177 Nth Highest Salary `(Medium)`](https://leetcode.com/problems/nth-highest-salary)
 - [176 Second Highest Salary `(Medium)`](https://leetcode.com/problems/second-highest-salary)
 - [570 Managers With At Least 5 Direct Reports `(Medium)`](https://leetcode.com/problems/managers-with-at-least-5-direct-reports)
 - [1908 Recyclable And Low Fat Products `(Easy)`](https://leetcode.com/problems/recyclable-and-low-fat-products)
-- [1153 Product Sales Analysis I `(Easy)`](https://leetcode.com/problems/product-sales-analysis-i)
 
