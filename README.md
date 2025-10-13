@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 - [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 - [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
-- [7 Reverse Integer `(Medium)`](https://leetcode.com/problems/reverse-integer)
 
 ### 💻 CSharp
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
