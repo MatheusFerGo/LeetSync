@@ -8,10 +8,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 23 |
 | <g-emoji>🟠</g-emoji> **Médio** | 13 |
-| <g-emoji>🔴</g-emoji> **Difícil** | 2 |
-| **Total** | **38** |
+| <g-emoji>🔴</g-emoji> **Difícil** | 3 |
+| **Total** | **39** |
 
-*(Atualizado pela última vez em: 2025-10-13)*
+*(Atualizado pela última vez em: 2025-10-14)*
 
 ### 📂 Estrutura do Repositório
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 
 ### 🗄️ SQL
+- [180 Consecutive Numbers `(Medium)`](https://leetcode.com/problems/consecutive-numbers)
 - [178 Rank Scores `(Medium)`](https://leetcode.com/problems/rank-scores)
 - [177 Nth Highest Salary `(Medium)`](https://leetcode.com/problems/nth-highest-salary)
 - [176 Second Highest Salary `(Medium)`](https://leetcode.com/problems/second-highest-salary)
 - [570 Managers With At Least 5 Direct Reports `(Medium)`](https://leetcode.com/problems/managers-with-at-least-5-direct-reports)
-- [1908 Recyclable And Low Fat Products `(Easy)`](https://leetcode.com/problems/recyclable-and-low-fat-products)
 
