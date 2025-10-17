@@ -7,11 +7,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 26 |
-| <g-emoji>🟠</g-emoji> **Médio** | 13 |
+| <g-emoji>🟠</g-emoji> **Médio** | 14 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **42** |
+| **Total** | **43** |
 
-*(Atualizado pela última vez em: 2025-10-14)*
+*(Atualizado pela última vez em: 2025-10-17)*
 
 ### 📂 Estrutura do Repositório
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 
 ### 💻 CSharp
+- [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 - [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 - [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 - [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
-- [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 
 ### 🗄️ SQL
 - [181 Employees Earning More Than Their Managers `(Easy)`](https://leetcode.com/problems/employees-earning-more-than-their-managers)
