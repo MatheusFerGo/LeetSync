@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 26 |
-| <g-emoji>🟠</g-emoji> **Médio** | 14 |
+| <g-emoji>🟠</g-emoji> **Médio** | 15 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **43** |
+| **Total** | **44** |
 
 *(Atualizado pela última vez em: 2025-10-17)*
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 - [10 Regular Expression Matching `(Hard)`](https://leetcode.com/problems/regular-expression-matching)
 - [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
-- [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 
 ### 💻 CSharp
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
