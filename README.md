@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 26 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 27 |
 | <g-emoji>🟠</g-emoji> **Médio** | 15 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **44** |
+| **Total** | **45** |
 
 *(Atualizado pela última vez em: 2025-10-17)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 
 ### 💻 CSharp
+- [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 - [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 - [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
-- [4 Median Of Two Sorted Arrays `(Hard)`](https://leetcode.com/problems/median-of-two-sorted-arrays)
 
 ### 🗄️ SQL
 - [181 Employees Earning More Than Their Managers `(Easy)`](https://leetcode.com/problems/employees-earning-more-than-their-managers)
