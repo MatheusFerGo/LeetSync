@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 27 |
-| <g-emoji>🟠</g-emoji> **Médio** | 16 |
+| <g-emoji>🟠</g-emoji> **Médio** | 17 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **46** |
+| **Total** | **47** |
 
 *(Atualizado pela última vez em: 2025-10-21)*
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 - [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 - [10 Regular Expression Matching `(Hard)`](https://leetcode.com/problems/regular-expression-matching)
 - [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
-- [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 
 ### 💻 CSharp
 - [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
