@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 27 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 28 |
 | <g-emoji>🟠</g-emoji> **Médio** | 17 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **47** |
+| **Total** | **48** |
 
 *(Atualizado pela última vez em: 2025-10-21)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 
 ### 💻 CSharp
+- [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 - [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 - [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
-- [5 Longest Palindromic Substring `(Medium)`](https://leetcode.com/problems/longest-palindromic-substring)
 
 ### 🗄️ SQL
 - [182 Duplicate Emails `(Easy)`](https://leetcode.com/problems/duplicate-emails)
