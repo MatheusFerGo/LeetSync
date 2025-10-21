@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [6 Zigzag Conversion `(Medium)`](https://leetcode.com/problems/zigzag-conversion)
 
 ### 🗄️ SQL
+- [183 Customers Who Never Order `(Easy)`](https://leetcode.com/problems/customers-who-never-order)
 - [182 Duplicate Emails `(Easy)`](https://leetcode.com/problems/duplicate-emails)
 - [181 Employees Earning More Than Their Managers `(Easy)`](https://leetcode.com/problems/employees-earning-more-than-their-managers)
 - [180 Consecutive Numbers `(Medium)`](https://leetcode.com/problems/consecutive-numbers)
 - [178 Rank Scores `(Medium)`](https://leetcode.com/problems/rank-scores)
-- [177 Nth Highest Salary `(Medium)`](https://leetcode.com/problems/nth-highest-salary)
 
