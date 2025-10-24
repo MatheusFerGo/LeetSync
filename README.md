@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 
 ### 🗄️ SQL
+- [196 Delete Duplicate Emails `(Easy)`](https://leetcode.com/problems/delete-duplicate-emails)
 - [184 Department Highest Salary `(Medium)`](https://leetcode.com/problems/department-highest-salary)
 - [183 Customers Who Never Order `(Easy)`](https://leetcode.com/problems/customers-who-never-order)
 - [182 Duplicate Emails `(Easy)`](https://leetcode.com/problems/duplicate-emails)
 - [181 Employees Earning More Than Their Managers `(Easy)`](https://leetcode.com/problems/employees-earning-more-than-their-managers)
-- [180 Consecutive Numbers `(Medium)`](https://leetcode.com/problems/consecutive-numbers)
 
