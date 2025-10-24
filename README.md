@@ -7,11 +7,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 28 |
-| <g-emoji>🟠</g-emoji> **Médio** | 18 |
+| <g-emoji>🟠</g-emoji> **Médio** | 19 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **49** |
+| **Total** | **50** |
 
-*(Atualizado pela última vez em: 2025-10-23)*
+*(Atualizado pela última vez em: 2025-10-24)*
 
 ### 📂 Estrutura do Repositório
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [17 Letter Combinations Of A Phone Number `(Medium)`](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 - [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 - [10 Regular Expression Matching `(Hard)`](https://leetcode.com/problems/regular-expression-matching)
-- [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 
 ### 💻 CSharp
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
