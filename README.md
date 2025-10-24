@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 29 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 30 |
 | <g-emoji>🟠</g-emoji> **Médio** | 19 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **51** |
+| **Total** | **52** |
 
 *(Atualizado pela última vez em: 2025-10-24)*
 
