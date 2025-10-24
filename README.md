@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [27 Remove Element `(Easy)`](https://leetcode.com/problems/remove-element)
 - [17 Letter Combinations Of A Phone Number `(Medium)`](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 - [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
-- [10 Regular Expression Matching `(Hard)`](https://leetcode.com/problems/regular-expression-matching)
 
 ### 💻 CSharp
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
