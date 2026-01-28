@@ -1,30 +1,23 @@
 public class Solution {
     public bool IsValid(string s) {
+        Stack<char> bracketStack = new Stack<char>();
 
-        var stack = new Stack<char>();
-
-        var bracketPairs = new Dictionary<char, char>
-        {
+        Dictionary<char, char> bracketMap = new Dictionary<char, char>{
             { ')', '(' },
             { '}', '{' },
             { ']', '[' }
         };
 
-        foreach (char c in s) 
-        {
-            if (bracketPairs.ContainsKey(c)) 
-            {
-                if (stack.Count == 0 || stack.Pop() != bracketPairs[c]) 
-                {
+        foreach (char currentChar in s){
+            if (bracketMap.ContainsKey(currentChar)){
+                if (bracketStack.Count == 0 || bracketStack.Pop() != bracketMap[currentChar]){
                     return false;
                 }
             }
-            else 
-            {
-                stack.Push(c);
+            else{
+                bracketStack.Push(currentChar);
             }
         }
-
-        return stack.Count == 0;
+        return bracketStack.Count == 0;
     }
 }
