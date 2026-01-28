@@ -1,15 +1,13 @@
-from typing import List
-
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        num_map = {}
+        previous_map = {}
 
-        for i, num in enumerate(nums):
-            complement = target - num
+        for i, n in enumerate(nums):
+            complement_number = target - n
 
-            if complement in num_map:
-                return [num_map[complement], i]
-            
-            num_map[num] = i
+            if complement_number in previous_map:
+                return [previous_map[complement_number], i]
+
+            previous_map[n] = i
 
         return []

@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 
 ### 💻 CSharp
+- [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [27 Remove Element `(Easy)`](https://leetcode.com/problems/remove-element)
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 - [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 - [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
-- [8 String To Integer Atoi `(Medium)`](https://leetcode.com/problems/string-to-integer-atoi)
 
 ### 🗄️ SQL
 - [1179 Game Play Analysis I `(Easy)`](https://leetcode.com/problems/game-play-analysis-i)
