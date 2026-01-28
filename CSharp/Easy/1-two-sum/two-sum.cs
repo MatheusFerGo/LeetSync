@@ -1,20 +1,18 @@
-using System;
-using System.Collections.Generic;
-
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
-        Dictionary<int, int> numMap = new Dictionary<int, int>();
+        Dictionary<int, int> map = new Dictionary<int, int>();
 
-        for (int i = 0; i < nums.Length; i++) {
-            int complement = target - nums[i];
+        for (int i = 0; i < nums.Length; i++){
+            int  complement_number = target - nums[i];
 
-            if (numMap.ContainsKey(complement)) {
-                return new int[] { numMap[complement], i };
+            if (map.ContainsKey(complement_number)){
+                return new int[] {map[complement_number], i};
             }
 
-            numMap[nums[i]] = i;
+            if (!map.ContainsKey(nums[i])){
+                map.Add(nums[i], i);
+            }
         }
-
         return new int[0];
     }
 }
