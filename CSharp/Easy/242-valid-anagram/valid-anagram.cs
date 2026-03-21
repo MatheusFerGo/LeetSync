@@ -1,16 +1,16 @@
 public class Solution {
     public bool IsAnagram(string s, string t) {
-        if(s.Length != t.Length) return false;
+        if (s.Length != t.Length) return false;
 
-        int[] charCounts = new int[26];
+        var counts = new Dictionary<char, int>();
 
-        for (int i = 0; i < s.Length; i++){
-            charCounts[s[i] - 'a']++;
-            charCounts[t[i] - 'a']--;
+        foreach (char c in s) {
+            counts[c] = counts.GetValueOrDefault(c, 0) + 1;
         }
 
-        foreach (int count in charCounts){
-            if(count != 0) return false;
+        foreach (char c in t) {
+            if (!counts.ContainsKey(c) || counts[c] == 0) return false;
+            counts[c]--;
         }
 
         return true;
