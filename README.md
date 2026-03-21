@@ -6,12 +6,12 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 32 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 33 |
 | <g-emoji>🟠</g-emoji> **Médio** | 19 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **54** |
+| **Total** | **55** |
 
-*(Atualizado pela última vez em: 2026-01-28)*
+*(Atualizado pela última vez em: 2026-03-21)*
 
 ### 📂 Estrutura do Repositório
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 
 ### 💻 CSharp
+- [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [27 Remove Element `(Easy)`](https://leetcode.com/problems/remove-element)
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 - [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
-- [26 Remove Duplicates From Sorted Array `(Easy)`](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 
 ### 🗄️ SQL
 - [1179 Game Play Analysis I `(Easy)`](https://leetcode.com/problems/game-play-analysis-i)
