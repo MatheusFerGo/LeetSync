@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [242 Valid Anagram `(Easy)`](https://leetcode.com/problems/valid-anagram)
 - [121 Best Time To Buy And Sell Stock `(Easy)`](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [27 Remove Element `(Easy)`](https://leetcode.com/problems/remove-element)
-- [17 Letter Combinations Of A Phone Number `(Medium)`](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
 
 ### 💻 CSharp
 - [121 Best Time To Buy And Sell Stock `(Easy)`](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)

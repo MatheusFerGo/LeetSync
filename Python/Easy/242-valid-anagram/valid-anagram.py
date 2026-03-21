@@ -3,19 +3,14 @@ class Solution:
         if len(s) != len(t):
             return False
         
-        s_chars_map = {}
-        t_chars_map = {}
-
+        count_map = {}
+        
         for char in s:
-            if char in s_chars_map:
-                s_chars_map[char] += 1
-            else:
-                s_chars_map[char] = 1
+            count_map[char] = count_map.get(char, 0) + 1
             
         for char in t:
-            if char in t_chars_map:
-                t_chars_map[char] += 1
-            else:
-                t_chars_map[char] = 1
-
-        return s_chars_map == t_chars_map
+            if char not in count_map or count_map[char] == 0:
+                return False
+            count_map[char] -= 1
+            
+        return True
