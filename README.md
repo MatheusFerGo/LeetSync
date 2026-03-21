@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 34 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 35 |
 | <g-emoji>🟠</g-emoji> **Médio** | 19 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **56** |
+| **Total** | **57** |
 
 *(Atualizado pela última vez em: 2026-03-21)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [17 Letter Combinations Of A Phone Number `(Medium)`](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
 
 ### 💻 CSharp
+- [121 Best Time To Buy And Sell Stock `(Easy)`](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [27 Remove Element `(Easy)`](https://leetcode.com/problems/remove-element)
 - [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
-- [12 Integer To Roman `(Medium)`](https://leetcode.com/problems/integer-to-roman)
 
 ### 🗄️ SQL
 - [1179 Game Play Analysis I `(Easy)`](https://leetcode.com/problems/game-play-analysis-i)
