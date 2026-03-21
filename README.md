@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 33 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 34 |
 | <g-emoji>🟠</g-emoji> **Médio** | 19 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **55** |
+| **Total** | **56** |
 
 *(Atualizado pela última vez em: 2026-03-21)*
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [121 Best Time To Buy And Sell Stock `(Easy)`](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 - [27 Remove Element `(Easy)`](https://leetcode.com/problems/remove-element)
 - [17 Letter Combinations Of A Phone Number `(Medium)`](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
-- [11 Container With Most Water `(Medium)`](https://leetcode.com/problems/container-with-most-water)
 
 ### 💻 CSharp
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
