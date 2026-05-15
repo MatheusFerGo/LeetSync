@@ -1,18 +1,28 @@
 public class Solution {
     public IList<IList<string>> GroupAnagrams(string[] strs) {
-        var anagramMap = new Dictionary<string, List<string>>();
+        Dictionary<string, List<string>> dicionario_de_anagramas_agrupados = new Dictionary<string, List<string>>();
 
-        foreach (string word in strs) {
-            char[] charArray = word.ToCharArray();
-            Array.Sort(charArray);
-            string sortedWord = new string(charArray);
-
-            if (!anagramMap.ContainsKey(sortedWord)){
-                anagramMap[sortedWord] = new List<string>();
+        foreach (string palavra_atual in strs){
+            int[] contagem_de_frequencia_de_letras = new int[26];
+            
+            foreach (char caractere_atual in palavra_atual){
+                int indice_da_letra_no_alfabeto = caractere_atual - 'a';
+                contagem_de_frequencia_de_letras[indice_da_letra_no_alfabeto]++;
             }
-            anagramMap[sortedWord].Add(word);
-        }
 
-        return anagramMap.Values.Cast<IList<string>>().ToList();
+            StringBuilder construtor_de_chave_identificadora = new StringBuilder();
+            foreach (int quantidade_da_letra in contagem_de_frequencia_de_letras){
+                construtor_de_chave_identificadora.Append('#');
+                construtor_de_chave_identificadora.Append(quantidade_da_letra);
+            }
+            string chave_identificadora_de_anagrama = construtor_de_chave_identificadora.ToString();
+
+            if (!dicionario_de_anagramas_agrupados.ContainsKey(chave_identificadora_de_anagrama)){
+                dicionario_de_anagramas_agrupados[chave_identificadora_de_anagrama] = new List<string>();
+            }
+
+            dicionario_de_anagramas_agrupados[chave_identificadora_de_anagrama].Add(palavra_atual);            
+        }
+        return new List<IList<string>>(dicionario_de_anagramas_agrupados.Values);
     }
 }
