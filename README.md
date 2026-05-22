@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 37 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 38 |
 | <g-emoji>🟠</g-emoji> **Médio** | 22 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **62** |
+| **Total** | **63** |
 
 *(Atualizado pela última vez em: 2026-05-22)*
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [1 Two Sum `(Easy)`](https://leetcode.com/problems/two-sum)
 
 ### 🗄️ SQL
+- [608 Tree Node `(Medium)`](https://leetcode.com/problems/tree-node)
 - [596 Classes With At Least 5 Students `(Easy)`](https://leetcode.com/problems/classes-with-at-least-5-students)
 - [1179 Game Play Analysis I `(Easy)`](https://leetcode.com/problems/game-play-analysis-i)
 - [196 Delete Duplicate Emails `(Easy)`](https://leetcode.com/problems/delete-duplicate-emails)
 - [184 Department Highest Salary `(Medium)`](https://leetcode.com/problems/department-highest-salary)
-- [183 Customers Who Never Order `(Easy)`](https://leetcode.com/problems/customers-who-never-order)
 
