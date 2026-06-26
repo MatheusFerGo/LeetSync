@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 43 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 44 |
 | <g-emoji>🟠</g-emoji> **Médio** | 22 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **68** |
+| **Total** | **69** |
 
 *(Atualizado pela última vez em: 2026-06-26)*
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 
 ### 🗄️ SQL
+- [1136 Actors And Directors Who Cooperated At Least Three Times `(Easy)`](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times)
 - [1724 Customer Who Visited But Did Not Make Any Transactions `(Easy)`](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions)
 - [175 Combine Two Tables `(Easy)`](https://leetcode.com/problems/combine-two-tables)
 - [607 Sales Person `(Easy)`](https://leetcode.com/problems/sales-person)
 - [1245 User Activity For The Past 30 Days I `(Easy)`](https://leetcode.com/problems/user-activity-for-the-past-30-days-i)
-- [608 Tree Node `(Medium)`](https://leetcode.com/problems/tree-node)
 
