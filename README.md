@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 41 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 42 |
 | <g-emoji>🟠</g-emoji> **Médio** | 22 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **66** |
+| **Total** | **67** |
 
 *(Atualizado pela última vez em: 2026-06-26)*
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 
 ### 🗄️ SQL
+- [175 Combine Two Tables `(Easy)`](https://leetcode.com/problems/combine-two-tables)
 - [607 Sales Person `(Easy)`](https://leetcode.com/problems/sales-person)
 - [1245 User Activity For The Past 30 Days I `(Easy)`](https://leetcode.com/problems/user-activity-for-the-past-30-days-i)
 - [608 Tree Node `(Medium)`](https://leetcode.com/problems/tree-node)
 - [596 Classes With At Least 5 Students `(Easy)`](https://leetcode.com/problems/classes-with-at-least-5-students)
-- [1179 Game Play Analysis I `(Easy)`](https://leetcode.com/problems/game-play-analysis-i)
 
