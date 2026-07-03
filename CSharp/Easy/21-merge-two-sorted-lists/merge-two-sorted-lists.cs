@@ -1,22 +1,27 @@
 public class Solution {
     public ListNode MergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode dummy = new ListNode(-1);
-        ListNode current = dummy;
+        ListNode no_falso_ancora = new ListNode(-1);
+        ListNode ponteiro_atual = no_falso_ancora;
 
-        while (list1 is not null && list2 is not null){
-            if(list1.val < list2.val){
-                current.next = list1;
+        while (list1 != null && list2 != null){
+            if(list1.val <= list2.val){
+                ponteiro_atual.next = list1;
                 list1 = list1.next;
             }
             else{
-                current.next = list2;
+                ponteiro_atual.next = list2;
                 list2 = list2.next;
             }
-            current = current.next;
+            ponteiro_atual = ponteiro_atual.next;
         }
 
-        current.next = (list1 is not null) ? list1 : list2;
+        if (list1 != null){
+            ponteiro_atual.next = list1;
+        }
+        else{
+            ponteiro_atual.next = list2;
+        }
 
-        return dummy.next;
+        return no_falso_ancora.next;
     }
 }
