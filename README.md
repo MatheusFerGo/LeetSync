@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 46 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 47 |
 | <g-emoji>🟠</g-emoji> **Médio** | 22 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **71** |
+| **Total** | **72** |
 
 *(Atualizado pela última vez em: 2026-07-03)*
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [908 Middle Of The Linked List `(Easy)`](https://leetcode.com/problems/middle-of-the-linked-list)
 - [206 Reverse Linked List `(Easy)`](https://leetcode.com/problems/reverse-linked-list)
 - [104 Maximum Depth Of Binary Tree `(Easy)`](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 - [49 Group Anagrams `(Medium)`](https://leetcode.com/problems/group-anagrams)
 - [242 Valid Anagram `(Easy)`](https://leetcode.com/problems/valid-anagram)
-- [121 Best Time To Buy And Sell Stock `(Easy)`](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 
 ### 💻 CSharp
 - [206 Reverse Linked List `(Easy)`](https://leetcode.com/problems/reverse-linked-list)
