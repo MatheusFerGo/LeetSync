@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [908 Middle Of The Linked List `(Easy)`](https://leetcode.com/problems/middle-of-the-linked-list)
 - [206 Reverse Linked List `(Easy)`](https://leetcode.com/problems/reverse-linked-list)
 - [104 Maximum Depth Of Binary Tree `(Easy)`](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 - [49 Group Anagrams `(Medium)`](https://leetcode.com/problems/group-anagrams)
-- [242 Valid Anagram `(Easy)`](https://leetcode.com/problems/valid-anagram)
 
 ### 💻 CSharp
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
