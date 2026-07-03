@@ -6,12 +6,12 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 45 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 46 |
 | <g-emoji>🟠</g-emoji> **Médio** | 22 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **70** |
+| **Total** | **71** |
 
-*(Atualizado pela última vez em: 2026-06-26)*
+*(Atualizado pela última vez em: 2026-07-03)*
 
 ### 📂 Estrutura do Repositório
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [121 Best Time To Buy And Sell Stock `(Easy)`](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 
 ### 💻 CSharp
+- [206 Reverse Linked List `(Easy)`](https://leetcode.com/problems/reverse-linked-list)
 - [104 Maximum Depth Of Binary Tree `(Easy)`](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 - [49 Group Anagrams `(Medium)`](https://leetcode.com/problems/group-anagrams)
 - [242 Valid Anagram `(Easy)`](https://leetcode.com/problems/valid-anagram)
 - [121 Best Time To Buy And Sell Stock `(Easy)`](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
-- [20 Valid Parentheses `(Easy)`](https://leetcode.com/problems/valid-parentheses)
 
 ### 🗄️ SQL
 - [1136 Actors And Directors Who Cooperated At Least Three Times `(Easy)`](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times)
