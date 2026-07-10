@@ -6,10 +6,10 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
-| <g-emoji>🟢</g-emoji> **Fácil** | 49 |
+| <g-emoji>🟢</g-emoji> **Fácil** | 50 |
 | <g-emoji>🟠</g-emoji> **Médio** | 22 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **74** |
+| **Total** | **75** |
 
 *(Atualizado pela última vez em: 2026-07-10)*
 
@@ -39,11 +39,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 ### 📚 Últimas 5 Soluções Adicionadas por Linguagem
 
 ### 🐍 Python
+- [141 Linked List Cycle `(Easy)`](https://leetcode.com/problems/linked-list-cycle)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [908 Middle Of The Linked List `(Easy)`](https://leetcode.com/problems/middle-of-the-linked-list)
 - [206 Reverse Linked List `(Easy)`](https://leetcode.com/problems/reverse-linked-list)
 - [104 Maximum Depth Of Binary Tree `(Easy)`](https://leetcode.com/problems/maximum-depth-of-binary-tree)
-- [49 Group Anagrams `(Medium)`](https://leetcode.com/problems/group-anagrams)
 
 ### 💻 CSharp
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
