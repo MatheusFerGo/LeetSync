@@ -7,9 +7,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 50 |
-| <g-emoji>🟠</g-emoji> **Médio** | 23 |
+| <g-emoji>🟠</g-emoji> **Médio** | 24 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **76** |
+| **Total** | **77** |
 
 *(Atualizado pela última vez em: 2026-07-17)*
 
@@ -46,11 +46,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [104 Maximum Depth Of Binary Tree `(Easy)`](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 
 ### 💻 CSharp
+- [19 Remove Nth Node From End Of List `(Medium)`](https://leetcode.com/problems/remove-nth-node-from-end-of-list)
 - [141 Linked List Cycle `(Easy)`](https://leetcode.com/problems/linked-list-cycle)
 - [21 Merge Two Sorted Lists `(Easy)`](https://leetcode.com/problems/merge-two-sorted-lists)
 - [908 Middle Of The Linked List `(Easy)`](https://leetcode.com/problems/middle-of-the-linked-list)
 - [206 Reverse Linked List `(Easy)`](https://leetcode.com/problems/reverse-linked-list)
-- [104 Maximum Depth Of Binary Tree `(Easy)`](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 
 ### 🗄️ SQL
 - [197 Rising Temperature `(Easy)`](https://leetcode.com/problems/rising-temperature)
