@@ -7,11 +7,11 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 | Categoria | Problemas Resolvidos |
 | :--- | :---: |
 | <g-emoji>🟢</g-emoji> **Fácil** | 50 |
-| <g-emoji>🟠</g-emoji> **Médio** | 22 |
+| <g-emoji>🟠</g-emoji> **Médio** | 23 |
 | <g-emoji>🔴</g-emoji> **Difícil** | 3 |
-| **Total** | **75** |
+| **Total** | **76** |
 
-*(Atualizado pela última vez em: 2026-07-10)*
+*(Atualizado pela última vez em: 2026-07-17)*
 
 ### 📂 Estrutura do Repositório
 
@@ -53,9 +53,9 @@ Este repositório contém minhas soluções para diversos problemas da plataform
 - [104 Maximum Depth Of Binary Tree `(Easy)`](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 
 ### 🗄️ SQL
+- [197 Rising Temperature `(Easy)`](https://leetcode.com/problems/rising-temperature)
 - [1811 Fix Names In A Table `(Easy)`](https://leetcode.com/problems/fix-names-in-a-table)
 - [1136 Actors And Directors Who Cooperated At Least Three Times `(Easy)`](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times)
 - [1724 Customer Who Visited But Did Not Make Any Transactions `(Easy)`](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions)
 - [175 Combine Two Tables `(Easy)`](https://leetcode.com/problems/combine-two-tables)
-- [607 Sales Person `(Easy)`](https://leetcode.com/problems/sales-person)
 
